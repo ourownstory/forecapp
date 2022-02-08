@@ -1,0 +1,79 @@
+// Here you can add other styles
+
+.drag-drop-default{
+    background: #F9F9FB;
+    border: 2px dashed #D2D7E5;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.drag-drop-active{
+    background: #bfbfc0;
+    border: 2px dashed #8b8f9a;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.myfooter{
+    min-height: 3rem;
+    font-size: 1rem*.875;
+}
+
+.myheader-navlink{
+    text-align: center;
+    font-size: 1rem*1.125;
+    font-weight: 500;
+}
+
+.active-myheader-navlink{
+    text-align: center;
+    font-size: 1rem*1.125;
+    font-weight: 500;
+}
+
+.smallHeader{
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+}
+
+.midHeader{
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.bottomHeader{
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.dragDropContent{
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.8;
+
+}
+
+.analyzeContent{
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.8;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .first-col{
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
