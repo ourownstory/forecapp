@@ -22,7 +22,8 @@ const Analyze = () => {
 
   //api analysis endpoint url
   // const api_base_url_train = 'http://localhost:5000/api/training/'
-  const api_base_url_train = 'https://forecapp.herokuapp.com/api/training'
+  // const api_base_url_train = 'https://forecapp.herokuapp.com/api/training'
+  const api_base_url_train = 'https://npforecast.herokuapp.com/api/training'
 
   // Can be a string as well. Need to ensure each key-value pair ends with ;
   const override = css`
