@@ -14,6 +14,7 @@ from neuralprophet import NeuralProphet
 import time
 from server_helpers import determine_timeframe
 
+
 app = Flask(__name__, static_folder="client/build", static_url_path="")
 cors = CORS(app)
 
@@ -71,14 +72,20 @@ def TrainModel():
 
     # receiving client payload
     data_list = received_payload[0]
-    data_df = pd.DataFrame(data_list[1:], columns=[data_list[0][0], data_list[0][1]])
     data_props = received_payload[1]
     settings_dict = received_payload[2]
+
+    # parsing data and dropping last line (last line appears to be empty)
+    data_df = pd.DataFrame(data_list[1:], columns=[data_list[0][0], data_list[0][1]])
+    data_df.drop(data_df.tail(1).index, inplace=True)
+
+    data_df.to_csv("this is my data.csv", index=False)
 
     # setting up neuralprophet
     m = NeuralProphet(
         loss_func=settings_dict["lossFunc"],
     )
+
     metrics = m.fit(data_df, freq=data_props["freq"][1])
     future = m.make_future_dataframe(
         data_df,
@@ -95,10 +102,10 @@ def TrainModel():
     forecast = forecast.fillna("")
 
     # create list containing "ds" and "yhat" from forecast dataframe
-    forecast_yhat1_list = forecast[["ds", "yhat1"]].tail(1000).values.tolist()
+    forecast_yhat1_list = forecast[["ds", "yhat1"]].values.tolist()
 
     # create list containing "ds" and "yhat" from original data dataframe
-    forecast_y_list = forecast[["ds", "y"]].tail(1000).values.tolist()
+    forecast_y_list = forecast[["ds", "y"]].values.tolist()
 
     time.sleep(2)
 

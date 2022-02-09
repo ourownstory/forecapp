@@ -20,7 +20,7 @@ def determine_timeframe(data, time_unit):
     first_date = pd.Timestamp(data[time_unit][0])
     second_date = pd.Timestamp(data[time_unit][1])
     time_delta = second_date - first_date
-    print()
+
     time_delta_int = int(str(time_delta).split(" ")[0])
 
     print([data[time_unit][0], data[time_unit][1]])
@@ -50,6 +50,5 @@ def determine_timeframe(data, time_unit):
         print("Frequency not supported")
 
     time_list = [time, freq, desc]
-    # print(time_list)
 
     return time_list

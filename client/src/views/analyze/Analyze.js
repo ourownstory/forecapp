@@ -22,7 +22,6 @@ const Analyze = () => {
 
   //api analysis endpoint url
   // const api_base_url_train = 'http://localhost:5000/api/training/'
-  // const api_base_url_train = 'https://forecapp.herokuapp.com/api/training'
   const api_base_url_train = 'https://npforecast.herokuapp.com/api/training'
 
   // Can be a string as well. Need to ensure each key-value pair ends with ;
@@ -46,7 +45,8 @@ const Analyze = () => {
     const myResponse = fetch(api_base_url_train, requestOptions)
       .then((response) => (response.ok ? response : Promise.reject(response)))
       .then((response) => response.json())
-
+    console.log('we made in sinide the loadJson func')
+    console.log(myResponse)
     return myResponse
   }
 
@@ -94,20 +94,20 @@ const Analyze = () => {
                           labels: data.xLabels,
                           datasets: [
                             {
-                              label: 'actuals',
-                              borderWidth: 2,
-                              backgroundColor: 'rgb(197, 218, 252)',
-                              borderColor: 'rgb(197, 218, 252)',
-                              pointRadius: 0,
-                              data: insertNan(data.forecast_y),
-                            },
-                            {
                               label: 'forecast',
                               borderWidth: 2,
                               backgroundColor: 'rgba(66, 133, 244, 1)',
                               borderColor: 'rgba(66, 133, 244, 1)',
                               pointRadius: 0,
                               data: data.forecast_yhat1,
+                            },
+                            {
+                              label: 'actuals',
+                              borderWidth: 2,
+                              backgroundColor: 'rgb(197, 218, 252)',
+                              borderColor: 'rgb(197, 218, 252)',
+                              pointRadius: 0,
+                              data: insertNan(data.forecast_y),
                             },
                           ],
                         }}

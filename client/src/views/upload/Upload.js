@@ -20,7 +20,6 @@ const Upload = () => {
 
   //api analysis endpoint url
   const api_base_url = 'https://npforecast.herokuapp.com/api/analysis/'
-  // const api_base_url = 'https://forecapp.herokuapp.com/api/analysis/'
   // const api_base_url = 'http://localhost:5000/api/analysis/'
 
   const childToParent = (childData) => {
