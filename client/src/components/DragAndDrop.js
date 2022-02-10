@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { parse } from 'papaparse'
 import PropTypes from 'prop-types'
 import doc_upload from 'src/assets/images/doc_upload.svg'
+import doc_success from 'src/assets/images/doc_success.svg'
 import { CCol, CRow } from '@coreui/react'
 
 const DragAndDrop = ({ paramFunc }) => {
@@ -59,7 +60,19 @@ const DragAndDrop = ({ paramFunc }) => {
           height: '300px',
           cursor: 'pointer',
         }}
-        className={highlighted ? 'drag-drop-active' : 'drag-drop-default'}
+        className={
+          !isFilePicked
+            ? highlighted
+              ? 'drag-drop-active'
+              : 'drag-drop-default'
+            : 'file-picked-border'
+        }
+        onMouseEnter={(e) => {
+          setHighlighted(true)
+        }}
+        onMouseLeave={(e) => {
+          setHighlighted(false)
+        }}
         onClick={(e) => {
           onButtonClick()
         }}
@@ -103,21 +116,40 @@ const DragAndDrop = ({ paramFunc }) => {
             alignItems: 'center',
           }}
         >
-          <img
-            style={{
-              paddingBottom: '1rem',
-            }}
-            src={doc_upload}
-            alt="Doc upload image"
-            width={100}
-            height={100}
-          ></img>
-
-          <p className="dragDropContent">
-            Drop it right in here <strong>or</strong> click to browse.
-          </p>
           {isFilePicked ? (
-            <p className="dragDropContent">Filename: {selectedFile.name}</p>
+            <img
+              style={{
+                paddingBottom: '1rem',
+              }}
+              src={doc_success}
+              alt="Doc upload image"
+              width={100}
+              height={100}
+            ></img>
+          ) : (
+            <img
+              style={{
+                paddingBottom: '1rem',
+              }}
+              src={doc_upload}
+              alt="Doc upload image"
+              width={100}
+              height={100}
+            ></img>
+          )}
+
+          {isFilePicked ? (
+            <p className="dragDropContent">Upload successful! Click Button below.</p>
+          ) : (
+            <p className="dragDropContent">
+              Drop it right in here <strong>or</strong> click to browse.
+            </p>
+          )}
+
+          {isFilePicked ? (
+            <p className="dragDropContent">
+              <i>Filename: {selectedFile.name}</i>
+            </p>
           ) : (
             <p className="dragDropContent">
               <i>No file selected.</i>

@@ -8,10 +8,18 @@
 }
 
 .drag-drop-active{
-    background: #bfbfc0;
-    border: 2px dashed #8b8f9a;
+    background: #d0def5;
+    border: 2px solid #4285F4;
     box-sizing: border-box;
     border-radius: 16px;
+}
+
+.file-picked-border{
+    background: #ddf6d5;
+    border: 2px solid #78DB57;
+    box-sizing: border-box;
+    border-radius: 16px;
+
 }
 
 .myfooter{

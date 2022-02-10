@@ -50,11 +50,6 @@ const Analyze = () => {
     return myResponse
   }
 
-  function buttonHandler() {
-    console.log('current csvData')
-    console.log(csvData)
-  }
-
   // Replace '' in array with Nans, required for chart.js to handle plots with different length
   function insertNan(originalForecast) {
     return originalForecast.map((value, index) => (value[1] === '' ? NaN : value[1]))
@@ -129,13 +124,6 @@ const Analyze = () => {
                 return <p>I have no idea what to do here..</p>
               }}
             </Async>
-            <CButton
-              type="submit"
-              className="text-white d-flex justify-content-center align-items-center'"
-              onClick={() => buttonHandler()}
-            >
-              Console Log Baby
-            </CButton>
           </CCardBody>
         </CCard>
       </CCol>
