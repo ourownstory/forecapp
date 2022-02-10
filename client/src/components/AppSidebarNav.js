@@ -23,16 +23,11 @@ export const AppSidebarNav = ({ items }) => {
   const navItem = (item, index) => {
     const { component, name, badge, icon, ...rest } = item
     const Component = component
+    console.log(rest.to)
+    console.log(rest.to)
+    console.log(rest.to)
     return (
-      <Component
-        {...(rest.to &&
-          !rest.items && {
-            component: NavLink,
-            activeClassName: 'active',
-          })}
-        key={index}
-        {...rest}
-      >
+      <Component href={rest.to} key={index} {...rest}>
         {navLink(name, icon, badge)}
       </Component>
     )

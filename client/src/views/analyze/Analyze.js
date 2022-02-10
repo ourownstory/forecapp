@@ -94,20 +94,20 @@ const Analyze = () => {
                           labels: data.xLabels,
                           datasets: [
                             {
-                              label: 'forecast',
-                              borderWidth: 2,
-                              backgroundColor: 'rgba(66, 133, 244, 1)',
-                              borderColor: 'rgba(66, 133, 244, 1)',
-                              pointRadius: 0,
-                              data: data.forecast_yhat1,
-                            },
-                            {
                               label: 'actuals',
                               borderWidth: 2,
                               backgroundColor: 'rgb(197, 218, 252)',
                               borderColor: 'rgb(197, 218, 252)',
                               pointRadius: 0,
                               data: insertNan(data.forecast_y),
+                            },
+                            {
+                              label: 'forecast',
+                              borderWidth: 2,
+                              backgroundColor: 'rgba(66, 133, 244, 1)',
+                              borderColor: 'rgba(66, 133, 244, 1)',
+                              pointRadius: 0,
+                              data: data.forecast_yhat1,
                             },
                           ],
                         }}
