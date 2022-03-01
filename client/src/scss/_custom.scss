@@ -1,87 +1,99 @@
 // Here you can add other styles
 
-.drag-drop-default{
-    background: #F9F9FB;
-    border: 2px dashed #D2D7E5;
-    box-sizing: border-box;
-    border-radius: 16px;
+.drag-drop-default {
+  background: #f9f9fb;
+  border: 2px dashed #d2d7e5;
+  box-sizing: border-box;
+  border-radius: 16px;
 }
 
-.drag-drop-active{
-    background: #d0def5;
-    border: 2px solid #4285F4;
-    box-sizing: border-box;
-    border-radius: 16px;
+.drag-drop-active {
+  background: #d0def5;
+  border: 2px solid #4285f4;
+  box-sizing: border-box;
+  border-radius: 16px;
 }
 
-.file-picked-border{
-    background: #ddf6d5;
-    border: 2px solid #78DB57;
-    box-sizing: border-box;
-    border-radius: 16px;
-
+.file-picked-border {
+  background: #ddf6d5;
+  border: 2px solid #78db57;
+  box-sizing: border-box;
+  border-radius: 16px;
 }
 
-.myfooter{
-    min-height: 3rem;
-    font-size: 1rem*.875;
+.myfooter {
+  min-height: 3rem;
+  font-size: 1rem * 0.875;
 }
 
-.myheader-navlink{
-    text-align: center;
-    font-size: 1rem*1.125;
-    font-weight: 500;
+.myheader-navlink {
+  text-align: center;
+  font-size: 1rem * 1.125;
+  font-weight: 500;
 }
 
-.active-myheader-navlink{
-    text-align: center;
-    font-size: 1rem*1.125;
-    font-weight: 500;
+.active-myheader-navlink {
+  text-align: center;
+  font-size: 1rem * 1.125;
+  font-weight: 500;
 }
 
-.smallHeader{
-    font-weight: 500;
-    font-size: 11px;
-    letter-spacing: 1.1px;
+.smallHeader {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1.1px;
 }
 
-.midHeader{
-    font-weight: 400;
-    font-size: 32px;
-    margin-bottom: 8px;
+.midHeader {
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 8px;
 }
 
-.bottomHeader{
-    font-weight: 400;
-    font-size: 14px;
-    opacity: 0.8;
+.bottomHeader {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.dragDropContent{
-    font-weight: 400;
-    font-size: 1rem;
-    opacity: 0.8;
-
+.dragDropContent {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
-.analyzeContent{
-    font-weight: 400;
-    font-size: 1rem;
-    opacity: 0.8;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 180px;
+.analyzeContent {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.8;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 180px;
+}
+
+.sampleDownload {
+  border: 2px solid #4285f4;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  color: #4285f4;
+  margin: 10px;
+  font-size: large;
+  text-align: center;
+  width: fit-content;
+  text-decoration: none;
 }
 
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-  .first-col{
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-  }
+.first-col {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}

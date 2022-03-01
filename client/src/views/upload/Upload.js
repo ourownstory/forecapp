@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { CCard, CCardBody, CCardHeader, CCol, CRow, CButton, CWidgetStatsF } from '@coreui/react'
+import { CCard, CCardText, CCardBody, CCardHeader, CCol, CRow, CButton, CWidgetStatsF } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import { cilCloudDownload } from '@coreui/icons'
 import {
   cilVerticalAlignTop,
   cilVerticalAlignBottom,
@@ -10,6 +11,7 @@ import {
 } from '@coreui/icons'
 import MyContext from 'src/context'
 import DragAndDrop from 'src/components/DragAndDrop'
+import DownloadButton from './DownloadButton'
 
 const Upload = () => {
   //useHistory hook to programmatically navigate to different route
@@ -50,6 +52,27 @@ const Upload = () => {
   return (
     <CRow>
       <CCol xs={12}>
+
+        <CCard xs={12} className="mb-4">
+          <CCardHeader>
+            <h3 className="midHeader">Quick Start</h3>
+          </CCardHeader>
+          <CCardBody>
+            <CCardText>
+              Upload a CSV file containing your data. NeuralProhet only accepts files with two columns. TODO: add better desctiption of acceptable files here
+            </CCardText>
+
+            <CCardText>
+              Example Files:
+            </CCardText>
+            <CRow className='justify-content-start'>
+              <DownloadButton name={"Hi"} url={"https://apple.com/"} />
+              <DownloadButton name={"Example 2"} url={"https://apple.com/"} />
+              <DownloadButton name={"Blueberry Muffin"} url={"https://apple.com/"} />
+            </CRow>
+          </CCardBody>
+        </CCard>
+
         <CCard className="mb-12">
           <CCardHeader>
             <small className="smallHeader">UPLOAD</small>
