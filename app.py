@@ -5,6 +5,7 @@ from flask import (
     request,
     jsonify,
     make_response,
+    send_file,
 )
 from flask_cors import CORS, cross_origin
 import boto3
@@ -23,6 +24,24 @@ cors = CORS(app)
 @cross_origin()
 def Welcome():
     return "Welcome to the API!!!"
+
+
+@app.route("/api/download-file1")
+@cross_origin()
+def DownloadFile1():
+    return send_file("datasets/air_passengers.csv", as_attachment=True)
+
+
+@app.route("/api/download-file2")
+@cross_origin()
+def DownloadFile2():
+    return send_file("datasets/example_retail_sales.csv", as_attachment=True)
+
+
+@app.route("/api/download-file3")
+@cross_origin()
+def DownloadFile3():
+    return send_file("datasets/wp_log_peyton_manning.csv", as_attachment=True)
 
 
 @app.route("/api/analysis/", methods=["POST"])
