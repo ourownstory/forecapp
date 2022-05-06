@@ -1,3 +1,8 @@
 /venv
 temp.py
 *.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
