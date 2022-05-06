@@ -66,9 +66,9 @@ const Upload = () => {
               Example Files:
             </CCardText>
             <CRow className='justify-content-start'>
-              <DownloadButton name={"Hi"} url={"https://apple.com/"} />
-              <DownloadButton name={"Example 2"} url={"https://apple.com/"} />
-              <DownloadButton name={"Blueberry Muffin"} url={"https://apple.com/"} />
+              <DownloadButton name={"Example 1"} url={"http://localhost:5000/api/download-file1"} />
+              <DownloadButton name={"Example 2"} url={"http://localhost:5000/api/download-file2"} />
+              <DownloadButton name={"Example 3"} url={"http://localhost:5000/api/download-file3"} />
             </CRow>
           </CCardBody>
         </CCard>

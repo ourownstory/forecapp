@@ -4,6 +4,7 @@ import { parse } from 'papaparse'
 import PropTypes from 'prop-types'
 import doc_upload from 'src/assets/images/doc_upload.svg'
 import doc_success from 'src/assets/images/doc_success.svg'
+import doc_error from 'src/assets/images/doc_error.svg'
 import { CCol, CRow } from '@coreui/react'
 
 const DragAndDrop = ({ paramFunc }) => {
@@ -30,6 +31,7 @@ const DragAndDrop = ({ paramFunc }) => {
 
   const [selectedFile, setSelectedFile] = useState()
   const [isFilePicked, setIsFilePicked] = useState(false)
+  const [error, setError] = useState(null)
 
   const changeHandler = (event) => {
     event.preventDefault()
@@ -65,7 +67,9 @@ const DragAndDrop = ({ paramFunc }) => {
             ? highlighted
               ? 'drag-drop-active'
               : 'drag-drop-default'
-            : 'file-picked-border'
+            : error
+              ? 'file-picked-error'
+              : 'file-picked-border'
         }
         onMouseEnter={(e) => {
           setHighlighted(true)
@@ -87,16 +91,28 @@ const DragAndDrop = ({ paramFunc }) => {
         }}
         onDrop={(event) => {
           event.preventDefault()
+
+          if (event.dataTransfer.files.length != 1) {
+            setError("Upload only one file at a time")
+            return
+          }
+
+          const file = event.dataTransfer.files[0];
+          if (file.type !== 'text/csv' && file.type !== 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+            setError(`Must be a CSV or XLSX file. (Uploaded file: ${file.name})`)
+            return
+          }
+
+          setError(null)
+          setSelectedFile(file)
           setHighlighted(false)
           setIsFilePicked(true)
-          setSelectedFile(event.dataTransfer.files[0])
-          Array.from(event.dataTransfer.files)
-            .filter((file) => file.type === 'text/csv')
-            .forEach(async (file) => {
-              const text = await file.text()
-              const result = parse(text, { header: false })
-              setInitData(result.data)
-            })
+
+          async () => {
+            const text = await file.text()
+            const result = parse(text, { header: false })
+            setInitData(result.data)
+          }
         }}
       >
         <input
@@ -116,48 +132,30 @@ const DragAndDrop = ({ paramFunc }) => {
             alignItems: 'center',
           }}
         >
-          {isFilePicked ? (
-            <img
-              style={{
-                paddingBottom: '1rem',
-              }}
-              src={doc_success}
-              alt="Doc upload image"
-              width={100}
-              height={100}
-            ></img>
-          ) : (
-            <img
-              style={{
-                paddingBottom: '1rem',
-              }}
-              src={doc_upload}
-              alt="Doc upload image"
-              width={100}
-              height={100}
-            ></img>
-          )}
+          <img
+            style={{
+              marginBottom: '1rem',
+            }}
+            src={error ? doc_error : (isFilePicked ? doc_success : doc_upload)}
+            alt="Doc upload image"
+            width={100}
+            height={100}
+          ></img>
 
-          {isFilePicked ? (
+          {!error && (isFilePicked ? (
             <p className="dragDropContent">Upload successful! Click Button below.</p>
           ) : (
             <p className="dragDropContent">
               Drop it right in here <strong>or</strong> click to browse.
             </p>
-          )}
+          ))}
 
-          {isFilePicked ? (
-            <p className="dragDropContent">
-              <i>Filename: {selectedFile.name}</i>
-            </p>
-          ) : (
-            <p className="dragDropContent">
-              <i>No file selected.</i>
-            </p>
-          )}
+          <p className="dragDropContent">
+            <i>{error ? error : (isFilePicked ? `Filename: ${selectedFile?.name}` : "No file selected.")}</i>
+          </p>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
