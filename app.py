@@ -53,7 +53,8 @@ def AnalyseCSV():
     if content_type == "application/json":
         csv_list = request.json
 
-    csv_dataframe = pd.DataFrame(csv_list[1:], columns=[csv_list[0][0], csv_list[0][1]])
+    csv_dataframe = pd.DataFrame(csv_list[1:], columns=[
+                                 csv_list[0][0], csv_list[0][1]])
 
     # get description of data column (assuming data column is the second column)
     data_mean = round(csv_dataframe.iloc[:, 1].astype(float).mean(), 3)
@@ -95,7 +96,8 @@ def TrainModel():
     settings_dict = received_payload[2]
 
     # parsing data and dropping last line (last line appears to be empty)
-    data_df = pd.DataFrame(data_list[1:], columns=[data_list[0][0], data_list[0][1]])
+    data_df = pd.DataFrame(data_list[1:], columns=[
+                           data_list[0][0], data_list[0][1]])
     data_df.drop(data_df.tail(1).index, inplace=True)
 
     data_df.to_csv("this is my data.csv", index=False)
@@ -142,4 +144,4 @@ def serve():
 
 
 if __name__ == "__main__":
-    app.run(host("0.0.0.0"))
+    app.run(host=("0.0.0.0"))
