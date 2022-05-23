@@ -1,0 +1,18 @@
+{
+  "name": "forecappelectron",
+  "version": "1.0.0",
+  "description": "Forcasting app built on NeuralProphet",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "NeuralProphet"
+  ],
+  "author": "Elijah Kim, Berni Hausleitner",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.2.3"
+  },
+  "dependencies": {}
+}

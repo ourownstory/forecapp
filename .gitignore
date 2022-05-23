@@ -6,3 +6,7 @@ temp.py
 __pycache__/
 *.pyc
 *.pyo
+
+client/build/
+
+node_modules/

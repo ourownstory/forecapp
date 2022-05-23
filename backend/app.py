@@ -90,6 +90,9 @@ def TrainModel():
     if content_type == "application/json":
         received_payload = request.json
 
+    print('hello')
+    print(received_payload)
+
     # receiving client payload
     data_list = received_payload[0]
     data_props = received_payload[1]
@@ -144,4 +147,4 @@ def serve():
 
 
 if __name__ == "__main__":
-    app.run(host=("0.0.0.0"))
+    app.run()
