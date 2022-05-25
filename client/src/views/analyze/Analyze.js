@@ -15,6 +15,7 @@ import {
 import MyContext from 'src/context'
 import { CChartLine } from '@coreui/react-chartjs'
 import { CChart } from '@coreui/react-chartjs'
+import { CSVLink } from "react-csv";
 
 const Analyze = () => {
   const { csvData, setCsvData, dataProps, settings, setSettings, forecastData, setForecastData } =
@@ -53,6 +54,13 @@ const Analyze = () => {
   // Replace '' in array with Nans, required for chart.js to handle plots with different length
   function insertNan(originalForecast) {
     return originalForecast.map((value, index) => (value[1] === '' ? NaN : value[1]))
+  }
+
+  const makeCSVData = (data) => {
+    let csvData = [["Time", "Actual", "Forecast"]]
+    data.forecast_y.forEach((d) => csvData.push(d))
+    data.forecast_yhat1.forEach((d, i) => csvData[i + 1].push(d[1]))
+    return csvData
   }
 
   return (
@@ -118,6 +126,14 @@ const Analyze = () => {
                           },
                         }}
                       />
+                      <CSVLink
+                        data={makeCSVData(data)}
+                        asyncOnClick={true}
+                        filename='NeuralProphet Forecast.csv'
+                        target='_blank'
+                      >
+                        Downlaod CSV
+                      </CSVLink>
                     </div>
                   )
 

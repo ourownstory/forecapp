@@ -45,7 +45,7 @@ const AppHeader = () => {
               activeClassName="active active-myheader-navlink"
               className="myheader-navlink"
             >
-              2. Train
+              2. Fit
             </CNavLink>
           </CNavItem>
           <CNavItem>

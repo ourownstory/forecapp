@@ -108,11 +108,12 @@ const DragAndDrop = ({ paramFunc }) => {
           setHighlighted(false)
           setIsFilePicked(true)
 
-          async () => {
+          const loadData = async () => {
             const text = await file.text()
             const result = parse(text, { header: false })
             setInitData(result.data)
           }
+          loadData()
         }}
       >
         <input
