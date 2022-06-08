@@ -1,6 +1,6 @@
 /venv
 temp.py
-*.csv
+this is my data.csv
 
 # Python
 __pycache__/

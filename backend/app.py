@@ -35,7 +35,7 @@ def DownloadFile1():
 @app.route("/api/download-file2")
 @cross_origin()
 def DownloadFile2():
-    return send_file("datasets/example_retail_sales.csv", as_attachment=True)
+    return send_file("datasets/retail_sales.csv", as_attachment=True)
 
 
 @app.route("/api/download-file3")
