@@ -12,7 +12,7 @@
   "author": "Elijah Kim, Berni Hausleitner",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^18.2.3"
-  },
-  "dependencies": {}
+    "electron": "^18.2.3",
+    "electron-icon-maker": "^0.0.5"
+  }
 }
