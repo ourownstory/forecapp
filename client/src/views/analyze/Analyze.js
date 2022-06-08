@@ -91,6 +91,15 @@ const Analyze = () => {
                 if (data)
                   return (
                     <div>
+                      <CSVLink
+                        data={makeCSVData(data)}
+                        asyncOnClick={true}
+                        filename='NeuralProphet Forecast.csv'
+                        target='_blank'
+                        className="sampleDownload"
+                      >
+                        Save Forecast CSV
+                      </CSVLink>
                       <CChart
                         type="line"
                         data={{
@@ -126,14 +135,6 @@ const Analyze = () => {
                           },
                         }}
                       />
-                      <CSVLink
-                        data={makeCSVData(data)}
-                        asyncOnClick={true}
-                        filename='NeuralProphet Forecast.csv'
-                        target='_blank'
-                      >
-                        Downlaod CSV
-                      </CSVLink>
                     </div>
                   )
 

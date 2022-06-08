@@ -59,7 +59,7 @@ const Upload = () => {
           </CCardHeader>
           <CCardBody>
             <CCardText>
-              Upload a CSV file containing your data. NeuralProhet only accepts files with two columns. TODO: add better desctiption of acceptable files here
+              Upload a CSV file containing your data. The file must be a spreadsheet with two columns, where the first column contains the dates/times, and the second column contains the y values. Download and try forcasting with the example files below!
             </CCardText>
 
             <CCardText>
