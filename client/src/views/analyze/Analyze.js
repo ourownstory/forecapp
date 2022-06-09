@@ -22,7 +22,7 @@ const Analyze = () => {
     useContext(MyContext)
 
   //api analysis endpoint url
-  const api_base_url_train = 'http://localhost:5000/api/training/'
+  const api_base_url_train = 'http://localhost:5050/api/training/'
   // const api_base_url_train = 'https://npforecast.herokuapp.com/api/training'
 
   // Can be a string as well. Need to ensure each key-value pair ends with ;
@@ -82,7 +82,7 @@ const Analyze = () => {
 
                       <div className="analyzeContent">
                         <p>
-                          Training your model <span>&nbsp;&#129497;&nbsp;</span>
+                          Training your model (this may take a while)<span>&nbsp;&#129497;&nbsp;</span>
                         </p>
                       </div>
                     </div>

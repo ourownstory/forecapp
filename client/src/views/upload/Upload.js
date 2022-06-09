@@ -22,7 +22,7 @@ const Upload = () => {
 
   //api analysis endpoint url
   // const api_base_url = 'https://npforecast.herokuapp.com/api/analysis/'
-  const api_base_url = 'http://localhost:5000/api/analysis/'
+  const api_base_url = 'http://localhost:5050/api/analysis/'
 
   const childToParent = (childData) => {
     setCsvData(childData)
@@ -66,9 +66,9 @@ const Upload = () => {
               Example Files:
             </CCardText>
             <CRow className='justify-content-start'>
-              <DownloadButton name={"Air Passengers"} url={"http://localhost:5000/api/download-file1"} />
-              <DownloadButton name={"Retail Sales"} url={"http://localhost:5000/api/download-file2"} />
-              <DownloadButton name={"Peyton Manning"} url={"http://localhost:5000/api/download-file3"} />
+              <DownloadButton name={"Air Passengers"} url={"http://localhost:5050/api/download-file1"} />
+              <DownloadButton name={"Retail Sales"} url={"http://localhost:5050/api/download-file2"} />
+              <DownloadButton name={"Peyton Manning"} url={"http://localhost:5050/api/download-file3"} />
             </CRow>
           </CCardBody>
         </CCard>
