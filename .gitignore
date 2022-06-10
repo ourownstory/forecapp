@@ -1,4 +1,5 @@
 /venv
+.DS_Store
 temp.py
 this is my data.csv
 
@@ -10,3 +11,7 @@ __pycache__/
 client/build/
 
 node_modules/
+
+# Compiled
+build/app/
+dist/*
