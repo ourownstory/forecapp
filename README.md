@@ -1,4 +1,4 @@
-# FORECAPP: A NeuralProphet Web Application
+# Forecapp: A NeuralProphet Web Application
 
 This repository contains FORECAPP - an open-source web application enabling anyone without coding and data science skills to run state-of-the-art forecasts. 
 FORECAPP is built on top off NeuralProphet, a Neural Network based Time-Series model, inspired by [Facebook Prophet](https://github.com/facebook/prophet) and [AR-Net](https://github.com/ourownstory/AR-Net), built on PyTorch.
@@ -6,7 +6,7 @@ FORECAPP is built on top off NeuralProphet, a Neural Network based Time-Series m
 <img width="1435" alt="forecapp" src="https://user-images.githubusercontent.com/58265021/166840144-2e3fb07a-7f7b-49a8-92c6-1311c13ebbe0.png">
 
 
-FORECAPP is currently deployed [here](https://forecapp.herokuapp.com/) 🚀
+Forecapp is currently deployed [here](https://forecapp.herokuapp.com/) 🚀
 
 ## How it works 
 
@@ -14,9 +14,16 @@ FORECAPP is currently deployed [here](https://forecapp.herokuapp.com/) 🚀
 
 ### Step 1
 
+User uploads file by drag and drop or selection via file browser. Forecapp automatically parses file and generates data insights.
+
 ### Step 2
 
+Forecapp plots the current timeseries data and allows user to specify model parameters for training. Model training starts after submission of model configurations.
+
 ### Step 3
+
+User can analyze the forecast and repeat Step 2 to finetune model parameters.
+
 
 ## Contribute
 We compiled a [Contributing to NeuralProphet]() page with practical instructions and further resources to help you become part of the FORECAPP family. 
