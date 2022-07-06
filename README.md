@@ -1,4 +1,4 @@
-# Forecapp: A NeuralProphet Web Application
+# Forecapp: A Full-Stack Web Application enabling modern Forecasts
 
 This repository contains FORECAPP - an open-source web application enabling anyone without coding and data science skills to run state-of-the-art forecasts. 
 FORECAPP is built on top off NeuralProphet, a Neural Network based Time-Series model, inspired by [Facebook Prophet](https://github.com/facebook/prophet) and [AR-Net](https://github.com/ourownstory/AR-Net), built on PyTorch.
