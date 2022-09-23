@@ -10,6 +10,12 @@ backend is compiled to an executable. Electron delivers the frontend and spins
 up a child process to run the backend. Requests are routed within the user’s
 computer via localhost:5050 to the local backend.
 
+## Start development app
+
+1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
+2. Start the frontend from the root directory `npm start`
+3. Start the backend. From /backend directory, `python app.py`
+
 ## Build instructions
 
 1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
