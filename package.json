@@ -1,0 +1,54 @@
+{
+  "name": "forecappelectron",
+  "version": "1.0.0",
+  "description": "Forcasting app built on NeuralProphet",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "NeuralProphet"
+  ],
+  "author": "Elijah Kim, Berni Hausleitner",
+  "license": "ISC",
+  "build": {
+    "productName": "Forecapp",
+    "appId": "forecapp",
+    "extraResources": [
+      "./dist/app/**"
+    ],
+    "mac": {
+      "category": "neuralprophet.forecapp"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel"
+    }
+  },
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-builder": "^23.0.3",
+    "electron-icon-maker": "^0.0.5"
+  }
+}

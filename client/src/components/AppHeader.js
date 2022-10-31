@@ -45,7 +45,7 @@ const AppHeader = () => {
               activeClassName="active active-myheader-navlink"
               className="myheader-navlink"
             >
-              2. Train
+              2. Fit
             </CNavLink>
           </CNavItem>
           <CNavItem>
@@ -59,7 +59,7 @@ const AppHeader = () => {
             </CNavLink>
           </CNavItem>
         </CHeaderNav>
-        <CHeaderNav>
+        {/* <CHeaderNav>
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilBell} size="lg" />
@@ -78,7 +78,7 @@ const AppHeader = () => {
         </CHeaderNav>
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
-        </CHeaderNav>
+        </CHeaderNav> */}
       </CContainer>
     </CHeader>
   )

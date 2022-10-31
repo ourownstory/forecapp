@@ -139,18 +139,18 @@ const Train = () => {
           </CCardHeader>
           <CCardBody>
             <CRow className="mb-3">
-              <CCol className=" first-col" sm={6}>
-                <CFormLabel htmlFor="inputEmail3">
-                  <small className="smallHeader">
-                    FORECAST LENGTH<br></br>
-                  </small>
-                  How many <strong>{dataProps.freq[0]}</strong> do you want to forecast out?
-                </CFormLabel>
-                <CCol sm={3}>
-                  <CFormInput type="email" onChange={formHandler} id="inputEmail3" />
-                </CCol>
+              {/* <CCol className=" first-col" sm={6}> */}
+              <CFormLabel htmlFor="inputEmail3">
+                <small className="smallHeader">
+                  FORECAST LENGTH<br></br>
+                </small>
+                How many <strong>{dataProps.freq[0]}</strong> into the future do you want to forecast?
+              </CFormLabel>
+              <CCol sm={3}>
+                <CFormInput type="email" onChange={formHandler} id="inputEmail3" />
               </CCol>
-              <CCol sm={6}>
+              {/* </CCol> */}
+              {/* <CCol sm={6}>
                 <small className="smallHeader">LOSS FUNCTION</small>
 
                 {lossFunction.map((value, index) => {
@@ -167,7 +167,7 @@ const Train = () => {
                     </div>
                   )
                 })}
-              </CCol>
+              </CCol> */}
             </CRow>
             <CButton type="submit" className="text-white" onClick={() => buttonHandler()}>
               Train Model

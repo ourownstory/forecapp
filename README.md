@@ -1,39 +1,25 @@
-# Forecapp: A Full-Stack Web Application enabling modern Forecasts
+# Forecapp
 
-This repository contains FORECAPP - an open-source web application enabling anyone without coding and data science skills to run state-of-the-art forecasts. 
-FORECAPP is built on top off NeuralProphet, a Neural Network based Time-Series model, inspired by [Facebook Prophet](https://github.com/facebook/prophet) and [AR-Net](https://github.com/ourownstory/AR-Net), built on PyTorch.
+A NeuralProphet GUI to make custom forecasts more accessible
 
-<img width="1435" alt="forecapp" src="https://user-images.githubusercontent.com/58265021/166840144-2e3fb07a-7f7b-49a8-92c6-1311c13ebbe0.png">
+## Structure
 
+Forecapp is built with a React frontend and a Python/Flask backend. The
+frontend is compiled to static HTML, Javascript, and CSS files, and the Flask
+backend is compiled to an executable. Electron delivers the frontend and spins
+up a child process to run the backend. Requests are routed within the user’s
+computer via localhost:5050 to the local backend.
 
-Forecapp is currently deployed [here](https://forecapp.herokuapp.com/) 🚀
+## Start development app
 
-## How it works 
+1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
+2. Start the frontend from the root directory `npm start`
+3. Start the backend. From /backend directory, `python app.py`
 
-![userflow](https://user-images.githubusercontent.com/58265021/166840405-474c9430-4063-4d66-bb57-c07c08e63721.png)
+## Build instructions
 
-### Step 1
-
-User uploads file by drag and drop or selection via file browser. Forecapp automatically parses file and generates data insights.
-
-### Step 2
-
-Forecapp plots the current timeseries data and allows user to specify model parameters for training. Model training starts after submission of model configurations.
-
-### Step 3
-
-User can analyze the forecast and repeat Step 2 to finetune model parameters.
-
-
-## Contribute
-We compiled a [Contributing to NeuralProphet]() page with practical instructions and further resources to help you become part of the FORECAPP family. 
-
-## Community
-We have an active [Slack community](https://join.slack.com/t/neuralprophet/shared_invite/zt-sgme2rw3-3dCH3YJ_wgg01IXHoYaeCg). Come and join the conversation!
-
-## About
-FORECAPP is part of NeuralProphet, which is and open-source community project, supported by awesome people like you. 
-If you are interested in joining the project, please feel free to reach anytime!
-
-
-
+1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
+2. Compile Python backend. `pyinstaller app.spec`
+3. Build frontend. From /client directory, `npm run build`
+4. Compile binary. `npm run dist`
+   The final application will be written to the /dist directory
