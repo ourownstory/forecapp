@@ -1,6 +1,5 @@
 from flask import (
     Flask,
-    render_template,
     send_from_directory,
     request,
     jsonify,
@@ -8,8 +7,6 @@ from flask import (
     send_file,
 )
 from flask_cors import CORS, cross_origin
-import boto3
-import os
 import pandas as pd
 from neuralprophet import NeuralProphet
 import time
