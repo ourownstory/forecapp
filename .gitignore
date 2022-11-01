@@ -1,7 +1,6 @@
 .venv/
 .DS_Store
 temp.py
-this is my data.csv
 
 # Python
 __pycache__/
