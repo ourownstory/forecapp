@@ -1,3 +1,4 @@
+from pathlib import Path
 from flask import (
     Flask,
     send_from_directory,
@@ -13,7 +14,11 @@ import time
 from server_helpers import determine_timeframe
 
 
-app = Flask(__name__, static_folder="client/build", static_url_path="")
+BASE_DIR = Path(__file__).resolve().parent.parent
+CLIENT_DIR = BASE_DIR / "client" / "build"
+
+
+app = Flask(__name__, static_folder=CLIENT_DIR, static_url_path="")
 cors = CORS(app)
 
 
