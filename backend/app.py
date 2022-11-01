@@ -95,7 +95,7 @@ def TrainModel():
     data_df = pd.DataFrame(data_list[1:], columns=[data_list[0][0], data_list[0][1]])
     data_df.drop(data_df.tail(1).index, inplace=True)
 
-    data_df.to_csv("this is my data.csv", index=False)
+    data_df.to_csv("data-df-dump.csv", index=False)
 
     # setting up neuralprophet
     m = NeuralProphet(
