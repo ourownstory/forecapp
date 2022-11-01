@@ -93,6 +93,7 @@ def TrainModel():
 
     # parsing data and dropping last line (last line appears to be empty)
     data_df = pd.DataFrame(data_list[1:], columns=[data_list[0][0], data_list[0][1]])
+    data_df["y"] = pd.to_numeric(data_df["y"])
     data_df.drop(data_df.tail(1).index, inplace=True)
 
     data_df.to_csv("data-df-dump.csv", index=False)
