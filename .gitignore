@@ -13,7 +13,7 @@ node_modules/
 
 # Compiled
 build/app/
-dist/*
+dist/
 
 # Dataframe dump
 data-df-dump.csv
