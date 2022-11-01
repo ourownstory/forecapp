@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Building backend..."
-pyinstaller app.spec
+pyinstaller app.spec --noconfirm
 
 echo "Building frontend..."
 (cd client && npm run build)
