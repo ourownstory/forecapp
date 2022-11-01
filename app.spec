@@ -5,10 +5,14 @@ block_cipher = None
 
 
 a = Analysis(
-    ['backend/app.py'],
+    ["backend/app.py"],
     pathex=[],
     binaries=[],
-    datas=[('backend/datasets/air_passengers.csv', './datasets'), ('backend/datasets/retail_sales.csv', './datasets'), ('backend/datasets/wp_log_peyton_manning.csv', './datasets')],
+    datas=[
+        ("backend/datasets/air_passengers.csv", "./datasets"),
+        ("backend/datasets/retail_sales.csv", "./datasets"),
+        ("backend/datasets/wp_log_peyton_manning.csv", "./datasets"),
+    ],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -26,7 +30,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='app',
+    name="app",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -46,5 +50,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='app',
+    name="app",
 )
