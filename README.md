@@ -34,7 +34,7 @@ Make sure you have completed the setup steps above.
 
 ### Build instructions
 
-Make sure you have completed the setup steps above.
+Make sure you have completed the setup steps above and installed [PyInstaller](https://pyinstaller.org/en/stable/#quickstart).
 
 1. Compile backend: `pyinstaller app.spec`
 2. Build frontend: `(cd client && npm run build)`
