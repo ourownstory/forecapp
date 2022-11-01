@@ -14,4 +14,5 @@ else
 fi
 
 echo "Installing dependencies for backend..."
+.venv/bin/pip install --upgrade pip
 .venv/bin/pip install -r backend/requirements.txt
