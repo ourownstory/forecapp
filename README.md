@@ -2,21 +2,19 @@
 
 A NeuralProphet GUI to make custom forecasts more accessible
 
-## Structure
+## Development
 
-Forecapp is built with a React frontend and a Python/Flask backend. The
-frontend is compiled to static HTML, Javascript, and CSS files, and the Flask
-backend is compiled to an executable. Electron delivers the frontend and spins
-up a child process to run the backend. Requests are routed within the user’s
-computer via localhost:5050 to the local backend.
+### Structure
 
-## Start development app
+Forecapp is built with a React frontend and a Python/Flask backend. The frontend is compiled to static HTML, Javascript, and CSS files, and the Flask backend is compiled to an executable. Electron delivers the frontend and spins up a child process to run the backend. Requests are routed within the user’s computer via localhost:5050 to the local backend.
+
+### Start development app
 
 1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
 2. Start the frontend from the root directory `npm start`
 3. Start the backend. From /backend directory, `python app.py`
 
-## Build instructions
+### Build instructions
 
 1. Install packages. `npm install` in both main directory and /client directory. Needed Python packages are listed in backend/requirements.txt
 2. Compile Python backend. `pyinstaller app.spec`
