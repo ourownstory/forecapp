@@ -36,6 +36,12 @@ Make sure you have completed the setup steps above.
 
 Make sure you have completed the setup steps above and installed [PyInstaller](https://pyinstaller.org/en/stable/#quickstart).
 
+```bash
+scripts/build.sh
+```
+
+Or manually:
+
 1. Compile backend: `pyinstaller app.spec`
 2. Build frontend: `(cd client && npm run build)`
 4. Compile binary: `npm run dist`
