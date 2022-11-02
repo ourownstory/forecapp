@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   CButton,
   CCard,
@@ -10,8 +10,8 @@ import {
   CFormLabel,
   CFormTextarea,
   CRow,
-} from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+} from "@coreui/react";
+import { DocsCallout, DocsExample } from "src/components";
 
 const FormControl = () => {
   return (
@@ -28,7 +28,9 @@ const FormControl = () => {
             <DocsExample href="forms/form-control">
               <CForm>
                 <div className="mb-3">
-                  <CFormLabel htmlFor="exampleFormControlInput1">Email address</CFormLabel>
+                  <CFormLabel htmlFor="exampleFormControlInput1">
+                    Email address
+                  </CFormLabel>
                   <CFormInput
                     type="email"
                     id="exampleFormControlInput1"
@@ -36,8 +38,13 @@ const FormControl = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <CFormLabel htmlFor="exampleFormControlTextarea1">Example textarea</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
+                  <CFormLabel htmlFor="exampleFormControlTextarea1">
+                    Example textarea
+                  </CFormLabel>
+                  <CFormTextarea
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></CFormTextarea>
                 </div>
               </CForm>
             </DocsExample>
@@ -51,8 +58,8 @@ const FormControl = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Set heights using <code>size</code> property like <code>size=&#34;lg&#34;</code> and{' '}
-              <code>size=&#34;sm&#34;</code>.
+              Set heights using <code>size</code> property like{" "}
+              <code>size=&#34;lg&#34;</code> and <code>size=&#34;sm&#34;</code>.
             </p>
             <DocsExample href="forms/form-control#sizing">
               <CFormInput
@@ -85,8 +92,8 @@ const FormControl = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Add the <code>disabled</code> boolean attribute on an input to give it a grayed out
-              appearance and remove pointer events.
+              Add the <code>disabled</code> boolean attribute on an input to
+              give it a grayed out appearance and remove pointer events.
             </p>
             <DocsExample href="forms/form-control#disabled">
               <CFormInput
@@ -115,9 +122,10 @@ const FormControl = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Add the <code>readOnly</code> boolean attribute on an input to prevent modification of
-              the input&#39;s value. Read-only inputs appear lighter (just like disabled inputs),
-              but retain the standard cursor.
+              Add the <code>readOnly</code> boolean attribute on an input to
+              prevent modification of the input&#39;s value. Read-only inputs
+              appear lighter (just like disabled inputs), but retain the
+              standard cursor.
             </p>
             <DocsExample href="forms/form-control#readonly">
               <CFormInput
@@ -133,17 +141,22 @@ const FormControl = () => {
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>React Form Control</strong> <small>Readonly plain text</small>
+            <strong>React Form Control</strong>{" "}
+            <small>Readonly plain text</small>
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              If you want to have <code>&lt;input readonly&gt;</code> elements in your form styled
-              as plain text, use the <code>plainText</code> boolean property to remove the default
-              form field styling and preserve the correct margin and padding.
+              If you want to have <code>&lt;input readonly&gt;</code> elements
+              in your form styled as plain text, use the <code>plainText</code>{" "}
+              boolean property to remove the default form field styling and
+              preserve the correct margin and padding.
             </p>
             <DocsExample href="components/accordion">
               <CRow className="mb-3">
-                <CFormLabel htmlFor="staticEmail" className="col-sm-2 col-form-label">
+                <CFormLabel
+                  htmlFor="staticEmail"
+                  className="col-sm-2 col-form-label"
+                >
                   Email
                 </CFormLabel>
                 <div className="col-sm-10">
@@ -157,7 +170,10 @@ const FormControl = () => {
                 </div>
               </CRow>
               <CRow className="mb-3">
-                <CFormLabel htmlFor="inputPassword" className="col-sm-2 col-form-label">
+                <CFormLabel
+                  htmlFor="inputPassword"
+                  className="col-sm-2 col-form-label"
+                >
                   Password
                 </CFormLabel>
                 <div className="col-sm-10">
@@ -168,7 +184,10 @@ const FormControl = () => {
             <DocsExample href="components/accordion">
               <CForm className="row g-3">
                 <div className="col-auto">
-                  <CFormLabel htmlFor="staticEmail2" className="visually-hidden">
+                  <CFormLabel
+                    htmlFor="staticEmail2"
+                    className="visually-hidden"
+                  >
                     Email
                   </CFormLabel>
                   <CFormInput
@@ -180,10 +199,17 @@ const FormControl = () => {
                   />
                 </div>
                 <div className="col-auto">
-                  <CFormLabel htmlFor="inputPassword2" className="visually-hidden">
+                  <CFormLabel
+                    htmlFor="inputPassword2"
+                    className="visually-hidden"
+                  >
                     Password
                   </CFormLabel>
-                  <CFormInput type="password" id="inputPassword2" placeholder="Password" />
+                  <CFormInput
+                    type="password"
+                    id="inputPassword2"
+                    placeholder="Password"
+                  />
                 </div>
                 <div className="col-auto">
                   <CButton type="submit" className="mb-3">
@@ -203,23 +229,33 @@ const FormControl = () => {
           <CCardBody>
             <DocsExample href="forms/form-control#file-input">
               <div className="mb-3">
-                <CFormLabel htmlFor="formFile">Default file input example</CFormLabel>
+                <CFormLabel htmlFor="formFile">
+                  Default file input example
+                </CFormLabel>
                 <CFormInput type="file" id="formFile" />
               </div>
               <div className="mb-3">
-                <CFormLabel htmlFor="formFileMultiple">Multiple files input example</CFormLabel>
+                <CFormLabel htmlFor="formFileMultiple">
+                  Multiple files input example
+                </CFormLabel>
                 <CFormInput type="file" id="formFileMultiple" multiple />
               </div>
               <div className="mb-3">
-                <CFormLabel htmlFor="formFileDisabled">Disabled file input example</CFormLabel>
+                <CFormLabel htmlFor="formFileDisabled">
+                  Disabled file input example
+                </CFormLabel>
                 <CFormInput type="file" id="formFileDisabled" disabled />
               </div>
               <div className="mb-3">
-                <CFormLabel htmlFor="formFileSm">Small file input example</CFormLabel>
+                <CFormLabel htmlFor="formFileSm">
+                  Small file input example
+                </CFormLabel>
                 <CFormInput type="file" size="sm" id="formFileSm" />
               </div>
               <div>
-                <CFormLabel htmlFor="formFileLg">Large file input example</CFormLabel>
+                <CFormLabel htmlFor="formFileLg">
+                  Large file input example
+                </CFormLabel>
                 <CFormInput type="file" size="lg" id="formFileLg" />
               </div>
             </DocsExample>
@@ -245,7 +281,7 @@ const FormControl = () => {
         </CCard>
       </CCol>
     </CRow>
-  )
-}
+  );
+};
 
-export default FormControl
+export default FormControl;

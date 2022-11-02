@@ -5,7 +5,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:     #fff !default;
+$white: #fff !default;
 // $gray-base: #3c4b64 !default;
 // $gray-100:  #ebedef !default;
 // $gray-200:  #d8dbe0 !default;
@@ -40,7 +40,7 @@ $white:     #fff !default;
 // $disabled:                 rgba(shift-color($gray-base, +26), .38) !default;
 
 // $high-emphasis-inverse:    rgba($white, .87) !default;
-$medium-emphasis-inverse:  $white !default;
+$medium-emphasis-inverse: $white !default;
 // $disabled-inverse:         rgba($white, .38) !default;
 
 // scss-docs-start color-variables
@@ -76,7 +76,7 @@ $medium-emphasis-inverse:  $white !default;
 
 // fusv-disable
 // $primary-dark:  #1f1498 !default;
-$primary-base:  #4285F4 !default;
+$primary-base: #4285f4 !default;
 // $primary-50:    #988fed !default;
 // $primary-25:    #ccc7f6 !default;
 
@@ -338,7 +338,6 @@ $primary-base:  #4285F4 !default;
 // $body-color:                $high-emphasis !default;
 // $body-text-align:           null !default;
 
-
 // Links
 //
 // Style anchor elements.
@@ -357,7 +356,6 @@ $primary-base:  #4285F4 !default;
 // Style p element.
 
 // $paragraph-margin-bottom:   1rem !default;
-
 
 // Grid breakpoints
 //
@@ -378,7 +376,6 @@ $primary-base:  #4285F4 !default;
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 // @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
-
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
@@ -395,7 +392,6 @@ $primary-base:  #4285F4 !default;
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
@@ -409,7 +405,6 @@ $primary-base:  #4285F4 !default;
 // Container padding
 
 // $container-padding-x: $grid-gutter-width / 2 !default;
-
 
 // Components
 //
@@ -478,13 +473,13 @@ $primary-base:  #4285F4 !default;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 // $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
-$font-family-base:            "Inter, sans-serif" !default;
+$font-family-base: "Inter, sans-serif" !default;
 // $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
 // $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 // $font-size-sm:                $font-size-base * .875 !default;
 // $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -498,7 +493,7 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 
 // $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
+$line-height-base: 1.5 !default;
 // $line-height-sm:              1.25 !default;
 // $line-height-lg:              2 !default;
 
@@ -598,7 +593,6 @@ $line-height-base:            1.5 !default;
 // $icon-size-lg:    $icon-size-base * 1.25 !default;
 // $icon-size-xl:    $icon-size-base * 1.5 !default;
 
-
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
@@ -654,7 +648,6 @@ $line-height-base:            1.5 !default;
 // ) !default;
 // scss-docs-end table-loop
 
-
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
@@ -682,7 +675,6 @@ $line-height-base:            1.5 !default;
 
 // $input-btn-border-width:      $border-width !default;
 // scss-docs-end input-btn-variables
-
 
 // Buttons
 //
@@ -755,7 +747,6 @@ $line-height-base:            1.5 !default;
 //   "dark": btn-outline-color-map($dark)
 // ) !default;
 // scss-docs-end btn-variables
-
 
 // Forms
 // scss-docs-start form-variables
@@ -1023,10 +1014,9 @@ $line-height-base:            1.5 !default;
 // $zindex-toaster:                    1090 !default;
 // scss-docs-end zindex-stack
 
-
 // Navs
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-y: 0.5rem !default;
 // $nav-link-padding-x:                1rem !default;
 // $nav-link-font-size:                null !default;
 // $nav-link-font-weight:              null !default;
@@ -1048,7 +1038,6 @@ $nav-link-padding-y:                .5rem !default;
 // $nav-pills-link-active-color:       $component-active-color !default;
 // $nav-pills-link-active-bg:          $component-active-bg !default;
 // scss-docs-end nav-variables
-
 
 // Navbar
 
@@ -1093,7 +1082,6 @@ $nav-link-padding-y:                .5rem !default;
 // $navbar-dark-brand-color:                 $navbar-dark-active-color !default;
 // $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 // scss-docs-end navbar-theme-variables
-
 
 // Dropdowns
 //
@@ -1145,7 +1133,6 @@ $nav-link-padding-y:                .5rem !default;
 // $dropdown-dark-header-color:        $gray-500 !default;
 // scss-docs-end dropdown-dark-variables
 
-
 // Pagination
 
 // scss-docs-start pagination-variables
@@ -1187,7 +1174,6 @@ $nav-link-padding-y:                .5rem !default;
 // $pagination-border-radius-lg:       $border-radius-lg !default;
 // scss-docs-end pagination-variables
 
-
 // Cards
 // scss-docs-start card-variables
 // $card-spacer-y:                     $spacer !default;
@@ -1200,7 +1186,7 @@ $nav-link-padding-y:                .5rem !default;
 // $card-cap-padding-y:                $card-spacer-y / 2 !default;
 // $card-cap-padding-x:                $card-spacer-x !default;
 // $card-cap-bg:                       rgba($black, .03) !default;
-$card-cap-bg:                       rgba($white, .03) !default;
+$card-cap-bg: rgba($white, 0.03) !default;
 // $card-cap-color:                    unset !default;
 // $card-height:                       null !default;
 // $card-color:                        unset !default;
@@ -1272,7 +1258,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 // scss-docs-end tooltip-feedback-variables
 
-
 // Popovers
 // scss-docs-start popover-variables
 // $popover-font-size:                 $font-size-sm !default;
@@ -1300,7 +1285,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 // scss-docs-end popover-variables
 
-
 // Toasts
 // scss-docs-start toast-variables
 // $toast-max-width:                   350px !default;
@@ -1320,7 +1304,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 // scss-docs-end toast-variables
 
-
 // Badges
 // scss-docs-start badge-variables
 // $badge-font-size:                   .75em !default;
@@ -1335,7 +1318,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $badge-padding-y-sm:                .3em !default;
 // $badge-padding-x-sm:                .5em !default;
 // scss-docs-end badge-variables
-
 
 // Modals
 
@@ -1378,7 +1360,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $modal-transition:                  transform .3s ease-out !default;
 // $modal-scale-transform:             scale(1.02) !default;
 // scss-docs-end modal-variables
-
 
 // Avatars
 // scss-docs-start avatar-variables
@@ -1446,7 +1427,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // ) !default;
 // scss-docs-end callout-variables
 
-
 // Progress bars
 
 // scss-docs-start progress-variables
@@ -1500,7 +1480,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 //   "dark": list-group-color-map($dark)
 // ) !default;
 // scss-docs-end list-group-variables
-
 
 // Header
 // scss-docs-start header-variables
@@ -1562,7 +1541,6 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $subheader-disabled-color:         $disabled !default;
 // scss-docs-end subheader-default-themes
 
-
 // Image thumbnails
 
 // scss-docs-start thumbnail-variables
@@ -1574,14 +1552,12 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $thumbnail-box-shadow:              $box-shadow-sm !default;
 // scss-docs-end thumbnail-variables
 
-
 // Figures
 
 // scss-docs-start figure-variables
 // $figure-caption-font-size:          $small-font-size !default;
 // $figure-caption-color:              $gray-600 !default;
 // scss-docs-end figure-variables
-
 
 // Breadcrumbs
 // scss-docs-start breadcrumb-variables
@@ -1643,15 +1619,15 @@ $card-cap-bg:                       rgba($white, .03) !default;
 // $sidebar-padding-y:                        0 !default;
 // $sidebar-padding-x:                        0 !default;
 
-$sidebar-color:                            $primary-base !default;
-$sidebar-bg:                               $primary-base !default;
+$sidebar-color: $primary-base !default;
+$sidebar-bg: $primary-base !default;
 // $sidebar-border-width:                     0 !default;
 // $sidebar-border-color:                     transparent !default;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s !default;
 
 // $sidebar-brand-height:                     4rem !default;
-$sidebar-brand-color:                      $primary-base !default;
-$sidebar-brand-bg:                         $primary-base !default;
+$sidebar-brand-color: $primary-base !default;
+$sidebar-brand-bg: $primary-base !default;
 
 // $sidebar-header-height:                    4rem !default;
 // $sidebar-header-padding-y:                 .75rem !default;
@@ -1693,7 +1669,7 @@ $sidebar-brand-bg:                         $primary-base !default;
 // $sidebar-nav-icon-height:                  1.25rem !default;
 // $sidebar-nav-icon-font-size:               $sidebar-nav-icon-height !default;
 
-$sidebar-nav-group-bg:                     $primary-base !default;
+$sidebar-nav-group-bg: $primary-base !default;
 // $sidebar-nav-group-transition:             background .15s ease-in-out !default;
 // $sidebar-nav-group-items-transition:       height .15s ease !default;
 // $sidebar-nav-group-toggle-show-color:      $sidebar-nav-link-color !default;
@@ -1711,14 +1687,14 @@ $sidebar-nav-group-bg:                     $primary-base !default;
 // $sidebar-footer-height-transition:         height .15s, padding .15s !default;
 
 // $sidebar-toggler-height:                   3rem !default;
-$sidebar-toggler-bg:                       $primary-base !default;
+$sidebar-toggler-bg: $primary-base !default;
 // $sidebar-toggler-transition:               transform .15s !default;
 
 // $sidebar-toggler-indicator-width:          4rem !default;
 // $sidebar-toggler-indicator-height:         3rem !default;
-$sidebar-toggler-indicator-color:          $white !default;
+$sidebar-toggler-indicator-color: $white !default;
 // $sidebar-toggler-indicator-icon:           url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath fill='#{$sidebar-toggler-indicator-color}' d='M9.148 2.352l-4.148 4.148 4.148 4.148q0.148 0.148 0.148 0.352t-0.148 0.352l-1.297 1.297q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.797q-0.148-0.148-0.148-0.352t0.148-0.352l5.797-5.797q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.297q0.148 0.148 0.148 0.352t-0.148 0.352z'/%3E%3C/svg%3E") !default;
-$sidebar-toggler-hover-bg:                 $primary-base !default;
+$sidebar-toggler-hover-bg: $primary-base !default;
 // $sidebar-toggler-indicator-hover-color:    $sidebar-nav-link-hover-color !default;
 // $sidebar-toggler-indicator-hover-icon:     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath fill='#{$sidebar-toggler-indicator-hover-color}' d='M9.148 2.352l-4.148 4.148 4.148 4.148q0.148 0.148 0.148 0.352t-0.148 0.352l-1.297 1.297q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.797q-0.148-0.148-0.148-0.352t0.148-0.352l5.797-5.797q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.297q0.148 0.148 0.148 0.352t-0.148 0.352z'/%3E%3C/svg%3E") !default;
 // scss-docs-end sidebar-variables
@@ -1747,7 +1723,6 @@ $sidebar-toggler-hover-bg:                 $primary-base !default;
 // $spinner-border-width-sm: .2em !default;
 // scss-docs-end spinner-variables
 
-
 // Close
 // scss-docs-start close-variables
 // $btn-close-width:            1em !default;
@@ -1763,7 +1738,6 @@ $sidebar-toggler-hover-bg:                 $primary-base !default;
 // $btn-close-disabled-opacity: .25 !default;
 // $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-end close-variables
-
 
 // Offcanvas
 

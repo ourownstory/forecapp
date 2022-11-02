@@ -1,10 +1,10 @@
-import React, { Suspense, useState } from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
-import { CContainer, CSpinner } from '@coreui/react'
+import React, { Suspense, useState } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import { CContainer, CSpinner } from "@coreui/react";
 
 // routes config
-import routes from '../routes'
-import MyContext from 'src/context'
+import routes from "../routes";
+import MyContext from "src/context";
 
 const AppContent = () => {
   // initialize the context
@@ -20,27 +20,27 @@ const AppContent = () => {
   // })
 
   const [csvData, setCsvData] = useState([
-    ['ds', 'y'],
-    ['1949-01-01', '1'],
-    ['1949-02-01', '2'],
-    ['1949-03-01', '3'],
-    ['1949-04-01', '4'],
-  ])
+    ["ds", "y"],
+    ["1949-01-01", "1"],
+    ["1949-02-01", "2"],
+    ["1949-03-01", "3"],
+    ["1949-04-01", "4"],
+  ]);
   const [forecastData, setForecastData] = useState([
-    ['ds', 'y'],
-    ['1949-01-01', '1'],
-    ['1949-02-01', '2'],
-    ['1949-03-01', '3'],
-    ['1949-04-01', '4'],
-  ])
+    ["ds", "y"],
+    ["1949-01-01", "1"],
+    ["1949-02-01", "2"],
+    ["1949-03-01", "3"],
+    ["1949-04-01", "4"],
+  ]);
   const [dataProps, setDataProps] = useState({
     mean: 0,
     std: 0,
     min: 0,
     max: 0,
-    freq: ['days', 'D', 'daily'],
-  })
-  const [settings, setSettings] = useState({ timeSpan: 0, lossFunc: 'huber' })
+    freq: ["days", "D", "daily"],
+  });
+  const [settings, setSettings] = useState({ timeSpan: 0, lossFunc: "huber" });
 
   return (
     <MyContext.Provider
@@ -73,14 +73,14 @@ const AppContent = () => {
                     )}
                   />
                 )
-              )
+              );
             })}
             <Redirect from="/" to="/upload" />
           </Switch>
         </Suspense>
       </CContainer>
     </MyContext.Provider>
-  )
-}
+  );
+};
 
-export default React.memo(AppContent)
+export default React.memo(AppContent);

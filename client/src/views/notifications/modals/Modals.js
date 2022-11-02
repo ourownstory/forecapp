@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   CButton,
   CCard,
@@ -14,11 +14,11 @@ import {
   CPopover,
   CRow,
   CTooltip,
-} from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+} from "@coreui/react";
+import { DocsCallout, DocsExample } from "src/components";
 
 const LiveDemo = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
@@ -26,7 +26,9 @@ const LiveDemo = () => {
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
-        <CModalBody>Woohoo, you&#39;re reading this text in a modal!</CModalBody>
+        <CModalBody>
+          Woohoo, you&#39;re reading this text in a modal!
+        </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setVisible(false)}>
             Close
@@ -35,20 +37,27 @@ const LiveDemo = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const StaticBackdrop = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch static backdrop modal</CButton>
-      <CModal backdrop="static" visible={visible} onClose={() => setVisible(false)}>
+      <CButton onClick={() => setVisible(!visible)}>
+        Launch static backdrop modal
+      </CButton>
+      <CModal
+        backdrop="static"
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          I will not close if you click outside me. Don&#39;teven try to press escape key.
+          I will not close if you click outside me. Don&#39;teven try to press
+          escape key.
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setVisible(false)}>
@@ -58,11 +67,11 @@ const StaticBackdrop = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const ScrollingLongContent = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
@@ -72,82 +81,94 @@ const ScrollingLongContent = () => {
         </CModalHeader>
         <CModalBody>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
         </CModalBody>
         <CModalFooter>
@@ -158,11 +179,11 @@ const ScrollingLongContent = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const ScrollingLongContent2 = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
@@ -172,82 +193,94 @@ const ScrollingLongContent2 = () => {
         </CModalHeader>
         <CModalBody>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
         </CModalBody>
         <CModalFooter>
@@ -258,21 +291,28 @@ const ScrollingLongContent2 = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const VerticallyCentered = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Vertically centered modal</CButton>
-      <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
+      <CButton onClick={() => setVisible(!visible)}>
+        Vertically centered modal
+      </CButton>
+      <CModal
+        alignment="center"
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setVisible(false)}>
@@ -282,39 +322,50 @@ const VerticallyCentered = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const VerticallyCentered2 = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Vertically centered scrollable modal</CButton>
-      <CModal alignment="center" scrollable visible={visible} onClose={() => setVisible(false)}>
+      <CButton onClick={() => setVisible(!visible)}>
+        Vertically centered scrollable modal
+      </CButton>
+      <CModal
+        alignment="center"
+        scrollable
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
           <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla.
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </p>
           <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
           </p>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </p>
         </CModalBody>
         <CModalFooter>
@@ -325,15 +376,19 @@ const VerticallyCentered2 = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const TooltipsPopovers = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
-      <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
+      <CModal
+        alignment="center"
+        visible={visible}
+        onClose={() => setVisible(false)}
+      >
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
@@ -341,9 +396,12 @@ const TooltipsPopovers = () => {
           <h5>Popover in a modal</h5>
           <p>
             This
-            <CPopover title="Popover title" content="Popover body content is set in this property.">
+            <CPopover
+              title="Popover title"
+              content="Popover body content is set in this property."
+            >
               <CButton>button</CButton>
-            </CPopover>{' '}
+            </CPopover>{" "}
             triggers a popover on click.
           </p>
           <hr />
@@ -351,11 +409,11 @@ const TooltipsPopovers = () => {
           <p>
             <CTooltip content="Tooltip">
               <CLink>This link</CLink>
-            </CTooltip>{' '}
+            </CTooltip>{" "}
             and
             <CTooltip content="Tooltip">
               <CLink>that link</CLink>
-            </CTooltip>{' '}
+            </CTooltip>{" "}
             have tooltips on hover.
           </p>
         </CModalBody>
@@ -367,18 +425,22 @@ const TooltipsPopovers = () => {
         </CModalFooter>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const OptionalSizes = () => {
-  const [visibleXL, setVisibleXL] = useState(false)
-  const [visibleLg, setVisibleLg] = useState(false)
-  const [visibleSm, setVisibleSm] = useState(false)
+  const [visibleXL, setVisibleXL] = useState(false);
+  const [visibleLg, setVisibleLg] = useState(false);
+  const [visibleSm, setVisibleSm] = useState(false);
   return (
     <>
-      <CButton onClick={() => setVisibleXL(!visibleXL)}>Extra large modal</CButton>
+      <CButton onClick={() => setVisibleXL(!visibleXL)}>
+        Extra large modal
+      </CButton>
       <CButton onClick={() => setVisibleLg(!visibleLg)}>Large modal</CButton>
-      <CButton onClick={() => setVisibleSm(!visibleSm)}>Small large modal</CButton>
+      <CButton onClick={() => setVisibleSm(!visibleSm)}>
+        Small large modal
+      </CButton>
       <CModal size="xl" visible={visibleXL} onClose={() => setVisibleXL(false)}>
         <CModalHeader>
           <CModalTitle>Extra large modal</CModalTitle>
@@ -398,64 +460,94 @@ const OptionalSizes = () => {
         <CModalBody>...</CModalBody>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const FullscreenModal = () => {
-  const [visible, setVisible] = useState(false)
-  const [visibleSm, setVisibleSm] = useState(false)
-  const [visibleMd, setVisibleMd] = useState(false)
-  const [visibleLg, setVisibleLg] = useState(false)
-  const [visibleXL, setVisibleXL] = useState(false)
-  const [visibleXXL, setVisibleXXL] = useState(false)
+  const [visible, setVisible] = useState(false);
+  const [visibleSm, setVisibleSm] = useState(false);
+  const [visibleMd, setVisibleMd] = useState(false);
+  const [visibleLg, setVisibleLg] = useState(false);
+  const [visibleXL, setVisibleXL] = useState(false);
+  const [visibleXXL, setVisibleXXL] = useState(false);
 
   return (
     <>
       <CButton onClick={() => setVisible(!visible)}>Full screen</CButton>
-      <CButton onClick={() => setVisibleSm(!visibleSm)}>Full screen below sm</CButton>
-      <CButton onClick={() => setVisibleMd(!visibleMd)}>Full screen below md</CButton>
-      <CButton onClick={() => setVisibleLg(!visibleLg)}>Full screen below lg</CButton>
-      <CButton onClick={() => setVisibleXL(!visibleXL)}>Full screen below xl</CButton>
-      <CButton onClick={() => setVisibleXXL(!visibleXXL)}>Full screen below xxl</CButton>
+      <CButton onClick={() => setVisibleSm(!visibleSm)}>
+        Full screen below sm
+      </CButton>
+      <CButton onClick={() => setVisibleMd(!visibleMd)}>
+        Full screen below md
+      </CButton>
+      <CButton onClick={() => setVisibleLg(!visibleLg)}>
+        Full screen below lg
+      </CButton>
+      <CButton onClick={() => setVisibleXL(!visibleXL)}>
+        Full screen below xl
+      </CButton>
+      <CButton onClick={() => setVisibleXXL(!visibleXXL)}>
+        Full screen below xxl
+      </CButton>
       <CModal fullscreen visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Full screen</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
-      <CModal fullscreen="sm" visible={visibleSm} onClose={() => setVisibleSm(false)}>
+      <CModal
+        fullscreen="sm"
+        visible={visibleSm}
+        onClose={() => setVisibleSm(false)}
+      >
         <CModalHeader>
           <CModalTitle>Full screen below sm</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
-      <CModal fullscreen="md" visible={visibleMd} onClose={() => setVisibleMd(false)}>
+      <CModal
+        fullscreen="md"
+        visible={visibleMd}
+        onClose={() => setVisibleMd(false)}
+      >
         <CModalHeader>
           <CModalTitle>Full screen below md</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
-      <CModal fullscreen="lg" visible={visibleLg} onClose={() => setVisibleLg(false)}>
+      <CModal
+        fullscreen="lg"
+        visible={visibleLg}
+        onClose={() => setVisibleLg(false)}
+      >
         <CModalHeader>
           <CModalTitle>Full screen below lg</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
-      <CModal fullscreen="xl" visible={visibleXL} onClose={() => setVisibleXL(false)}>
+      <CModal
+        fullscreen="xl"
+        visible={visibleXL}
+        onClose={() => setVisibleXL(false)}
+      >
         <CModalHeader>
           <CModalTitle>Full screen below xl</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
-      <CModal fullscreen="xxl" visible={visibleXXL} onClose={() => setVisibleXXL(false)}>
+      <CModal
+        fullscreen="xxl"
+        visible={visibleXXL}
+        onClose={() => setVisibleXXL(false)}
+      >
         <CModalHeader>
           <CModalTitle>Full screen below xxl</CModalTitle>
         </CModalHeader>
         <CModalBody>...</CModalBody>
       </CModal>
     </>
-  )
-}
+  );
+};
 
 const Modals = () => {
   return (
@@ -470,10 +562,11 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Below is a static modal example (meaning its <code>position</code> and{' '}
-              <code>display</code> have been overridden). Included are the modal header, modal body
-              (required for <code>padding</code>), and modal footer (optional). We ask that you
-              include modal headers with dismiss actions whenever possible, or provide another
+              Below is a static modal example (meaning its <code>position</code>{" "}
+              and <code>display</code> have been overridden). Included are the
+              modal header, modal body (required for <code>padding</code>), and
+              modal footer (optional). We ask that you include modal headers
+              with dismiss actions whenever possible, or provide another
               explicit dismiss action.
             </p>
             <DocsExample href="components/modal">
@@ -504,10 +597,12 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Toggle a working modal demo by clicking the button below. It will slide down and fade
-              in from the top of the page.
+              Toggle a working modal demo by clicking the button below. It will
+              slide down and fade in from the top of the page.
             </p>
-            <DocsExample href="components/modal#live-demo">{LiveDemo()}</DocsExample>
+            <DocsExample href="components/modal#live-demo">
+              {LiveDemo()}
+            </DocsExample>
           </CCardBody>
         </CCard>
       </CCol>
@@ -518,11 +613,14 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              If you don’t provide an <code>onDimsiss</code> handler to the Modal component, your
-              modal will behave as though the backdrop is static, meaning it will not close when
-              clicking outside it. Click the button below to try it.
+              If you don’t provide an <code>onDimsiss</code> handler to the
+              Modal component, your modal will behave as though the backdrop is
+              static, meaning it will not close when clicking outside it. Click
+              the button below to try it.
             </p>
-            <DocsExample href="components/modal#static-backdrop">{StaticBackdrop()}</DocsExample>
+            <DocsExample href="components/modal#static-backdrop">
+              {StaticBackdrop()}
+            </DocsExample>
           </CCardBody>
         </CCard>
       </CCol>
@@ -533,16 +631,17 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              If you don’t provide an <code>onDimsiss</code> handler to the Modal component, your
-              modal will behave as though the backdrop is static, meaning it will not close when
-              clicking outside it. Click the button below to try it.
+              If you don’t provide an <code>onDimsiss</code> handler to the
+              Modal component, your modal will behave as though the backdrop is
+              static, meaning it will not close when clicking outside it. Click
+              the button below to try it.
             </p>
             <DocsExample href="components/modal#scrolling-long-content">
               {ScrollingLongContent()}
             </DocsExample>
             <p className="text-medium-emphasis small">
-              You can also create a scrollable modal that allows scroll the modal body by adding{' '}
-              <code>scrollable</code> prop.
+              You can also create a scrollable modal that allows scroll the
+              modal body by adding <code>scrollable</code> prop.
             </p>
             <DocsExample href="components/modal#scrolling-long-content">
               {ScrollingLongContent2()}
@@ -557,8 +656,8 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Add <code>alignment=&#34;center&#34;</code> to <code>&lt;CModal&gt;</code> to
-              vertically center the modal.
+              Add <code>alignment=&#34;center&#34;</code> to{" "}
+              <code>&lt;CModal&gt;</code> to vertically center the modal.
             </p>
             <DocsExample href="components/modal#vertically-centered">
               {VerticallyCentered()}
@@ -576,9 +675,9 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              <code>&lt;CTooltips&gt;</code> and <code>&lt;CPopovers&gt;</code> can be placed within
-              modals as needed. When modals are closed, any tooltips and popovers within are also
-              automatically dismissed.
+              <code>&lt;CTooltips&gt;</code> and <code>&lt;CPopovers&gt;</code>{" "}
+              can be placed within modals as needed. When modals are closed, any
+              tooltips and popovers within are also automatically dismissed.
             </p>
             <DocsExample href="components/modal#tooltips-and-popovers">
               {TooltipsPopovers()}
@@ -593,9 +692,10 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Modals have three optional sizes, available via modifier classes to be placed on a{' '}
-              <code>&lt;CModal&gt;</code>. These sizes kick in at certain breakpoints to avoid
-              horizontal scrollbars on narrower viewports.
+              Modals have three optional sizes, available via modifier classes
+              to be placed on a <code>&lt;CModal&gt;</code>. These sizes kick in
+              at certain breakpoints to avoid horizontal scrollbars on narrower
+              viewports.
             </p>
             <table className="table">
               <thead>
@@ -642,7 +742,9 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <DocsExample href="components/modal#optional-sizes">{OptionalSizes()}</DocsExample>
+            <DocsExample href="components/modal#optional-sizes">
+              {OptionalSizes()}
+            </DocsExample>
           </CCardBody>
         </CCard>
       </CCol>
@@ -653,8 +755,8 @@ const Modals = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Another override is the option to pop up a modal that covers the user viewport,
-              available via property <code>fullscrean</code>.
+              Another override is the option to pop up a modal that covers the
+              user viewport, available via property <code>fullscrean</code>.
             </p>
             <table className="table">
               <thead>
@@ -712,12 +814,14 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <DocsExample href="components/modal#fullscreen-modal">{FullscreenModal()}</DocsExample>
+            <DocsExample href="components/modal#fullscreen-modal">
+              {FullscreenModal()}
+            </DocsExample>
           </CCardBody>
         </CCard>
       </CCol>
     </CRow>
-  )
-}
+  );
+};
 
-export default Modals
+export default Modals;

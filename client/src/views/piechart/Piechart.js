@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   CButton,
   CCard,
@@ -9,31 +9,32 @@ import {
   CFormInput,
   CFormLabel,
   CRow,
-} from '@coreui/react'
+} from "@coreui/react";
 
-import DragAndDrop from 'src/components/DragAndDrop'
+import DragAndDrop from "src/components/DragAndDrop";
 
 const Piechart = () => {
   //Set up the state variables
 
   //Image
-  const [downloadLink, setDownloadLink] = useState('')
+  const [downloadLink, setDownloadLink] = useState("");
 
   //Form variables
-  const [data, setData] = useState('40,60')
-  const [colors, setColors] = useState('003049,ffcdb2')
-  const [wedge, setWedge] = useState('0.05')
+  const [data, setData] = useState("40,60");
+  const [colors, setColors] = useState("003049,ffcdb2");
+  const [wedge, setWedge] = useState("0.05");
 
   //api base url
-  const api_base_url = 'https://forecapp.herokuapp.com/api/justpie/'
+  const api_base_url = "https://forecapp.herokuapp.com/api/justpie/";
 
   //function to fetch data from the API
   function fetchData() {
     //set image to be empty
-    setDownloadLink('')
+    setDownloadLink("");
 
     //build up API endpoint
-    var url_req_string = api_base_url + '?data=' + data + '&colors=' + colors + '&wedge=' + wedge
+    var url_req_string =
+      api_base_url + "?data=" + data + "&colors=" + colors + "&wedge=" + wedge;
 
     //fetch url and parse JSON response
     fetch(url_req_string)
@@ -41,14 +42,18 @@ const Piechart = () => {
       .then(
         (result) => {
           //set the image to be the API return message
-          setDownloadLink(result.message)
-          document.getElementById('htmlDownloadLink').innerHTML = downloadLink
-          document.getElementById('json_response').innerHTML = JSON.stringify(result, undefined, 2)
+          setDownloadLink(result.message);
+          document.getElementById("htmlDownloadLink").innerHTML = downloadLink;
+          document.getElementById("json_response").innerHTML = JSON.stringify(
+            result,
+            undefined,
+            2
+          );
         },
         (error) => {
-          console.log(error)
-        },
-      )
+          console.log(error);
+        }
+      );
   }
 
   return (
@@ -77,7 +82,10 @@ const Piechart = () => {
                 </CCol>
               </CRow>
               <CRow className="mb-3">
-                <CFormLabel htmlFor="colorSet" className="col-sm-2 col-form-label">
+                <CFormLabel
+                  htmlFor="colorSet"
+                  className="col-sm-2 col-form-label"
+                >
                   Color Set
                 </CFormLabel>
                 <CCol sm={10}>
@@ -125,7 +133,11 @@ const Piechart = () => {
               Here’s the requested downloadlink from the AWS Bucket
             </p>
             <p id="htmlDownloadLink">Test</p>
-            <img className="d-block w-100" src={downloadLink} alt="download from s3 bucket" />
+            <img
+              className="d-block w-100"
+              src={downloadLink}
+              alt="download from s3 bucket"
+            />
           </CCardBody>
         </CCard>
       </CCol>
@@ -136,7 +148,9 @@ const Piechart = () => {
           </CCardHeader>
           <CCardBody>
             <CForm>
-              <p className="text-medium-emphasis small">Here is the last API response</p>
+              <p className="text-medium-emphasis small">
+                Here is the last API response
+              </p>
               <CCol>
                 <pre id="json_response"></pre>
               </CCol>
@@ -145,7 +159,7 @@ const Piechart = () => {
         </CCard>
       </CCol>
     </CRow>
-  )
-}
+  );
+};
 
-export default Piechart
+export default Piechart;

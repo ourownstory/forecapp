@@ -1,12 +1,12 @@
-import React from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { brandSet } from '@coreui/icons'
-import { DocsCallout } from 'src/components'
+import React from "react";
+import { CCard, CCardBody, CCardHeader, CCol, CRow } from "@coreui/react";
+import CIcon from "@coreui/icons-react";
+import { brandSet } from "@coreui/icons";
+import { DocsCallout } from "src/components";
 
 const toKebabCase = (str) => {
-  return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
-}
+  return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
+};
 
 export const getIconsView = (iconset) => {
   return Object.entries(iconset).map(([name, value]) => (
@@ -14,8 +14,8 @@ export const getIconsView = (iconset) => {
       <CIcon icon={value} size="xxl" />
       <div>{toKebabCase(name)}</div>
     </CCol>
-  ))
-}
+  ));
+};
 
 const CoreUIIcons = () => {
   return (
@@ -32,7 +32,7 @@ const CoreUIIcons = () => {
         </CCardBody>
       </CCard>
     </>
-  )
-}
+  );
+};
 
-export default CoreUIIcons
+export default CoreUIIcons;

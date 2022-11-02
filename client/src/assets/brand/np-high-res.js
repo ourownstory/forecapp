@@ -1,5 +1,5 @@
 export const npHighRes = [
-  '155 27',
+  "155 27",
   `
   < svg width="155" height="27" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink" overflow="hidden" >
     <defs>
@@ -26,4 +26,4 @@ export const npHighRes = [
     </g>
   </svg >
   `,
-]
+];

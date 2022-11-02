@@ -1,5 +1,5 @@
 export const logoNp = [
-  '278 148',
+  "278 148",
   `
   <svg width="278" height="148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
   <defs>
@@ -26,4 +26,4 @@ export const logoNp = [
   </g>
 </svg>
   `,
-]
+];

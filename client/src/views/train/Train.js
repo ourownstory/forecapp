@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react'
-import ReactDOM from 'react-dom'
-import Async from 'react-async'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useContext } from "react";
+import ReactDOM from "react-dom";
+import Async from "react-async";
+import { useHistory } from "react-router-dom";
 import {
   CButton,
   CCard,
@@ -12,58 +12,63 @@ import {
   CWidgetStatsF,
   CFormInput,
   CFormLabel,
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+} from "@coreui/react";
+import CIcon from "@coreui/icons-react";
 import {
   cilVerticalAlignTop,
   cilVerticalAlignBottom,
   cilResizeWidth,
   cilVideogame,
-} from '@coreui/icons'
-import MyContext from 'src/context'
-import { CChartLine } from '@coreui/react-chartjs'
+} from "@coreui/icons";
+import MyContext from "src/context";
+import { CChartLine } from "@coreui/react-chartjs";
 
 const Train = () => {
-  const { csvData, dataProps, setSettings } = useContext(MyContext)
+  const { csvData, dataProps, setSettings } = useContext(MyContext);
 
-  const lossFunction = ['huber', 'mse', 'mae']
-  const lossFunctionLabel = ['Huber (default)', 'MSE', 'MAE']
+  const lossFunction = ["huber", "mse", "mae"];
+  const lossFunctionLabel = ["Huber (default)", "MSE", "MAE"];
 
-  var button_value = 5
+  var button_value = 5;
 
   const [checkedLossFunction, setCheckedLossFunction] = useState(
     // new Array(lossFunction.length).fill(false),
-    [true, false, false],
-  )
+    [true, false, false]
+  );
   const handleOnChange = (position) => {
     // if state of position is true -> uncheck all others
     const updatedCheckedState = checkedLossFunction.map((item, index) =>
-      index === position ? true : false,
-    )
-    setCheckedLossFunction(updatedCheckedState)
-  }
+      index === position ? true : false
+    );
+    setCheckedLossFunction(updatedCheckedState);
+  };
   //useHistory hook to programmatically navigate to different route
-  const history = useHistory()
+  const history = useHistory();
 
   const myLabels = csvData.slice(1).map(function (element, index) {
-    return element[0]
-  })
+    return element[0];
+  });
 
   const myData = csvData.slice(1).map(function (element, index) {
-    return element[1]
-  })
+    return element[1];
+  });
 
   function buttonHandler() {
     // get selected frequency by mapping boolean array
-    const selectedIndex = checkedLossFunction.flatMap((bool, index) => (bool ? index : []))
-    var inputFormString = button_value
-    setSettings({ timeSpan: inputFormString, lossFunc: lossFunction[selectedIndex] })
-    history.push('/analyze')
+    const selectedIndex = checkedLossFunction.flatMap((bool, index) =>
+      bool ? index : []
+    );
+    var inputFormString = button_value;
+    setSettings({
+      timeSpan: inputFormString,
+      lossFunc: lossFunction[selectedIndex],
+    });
+    history.push("/analyze");
   }
 
   const formHandler = (e) => {
-    button_value = e.target.value
-  }
+    button_value = e.target.value;
+  };
 
   return (
     <CRow>
@@ -80,9 +85,9 @@ const Train = () => {
                 labels: myLabels,
                 datasets: [
                   {
-                    label: 'actuals',
-                    backgroundColor: 'rgba(220, 220, 220, 0.2)',
-                    borderColor: 'rgba(220, 220, 220, 1)',
+                    label: "actuals",
+                    backgroundColor: "rgba(220, 220, 220, 0.2)",
+                    borderColor: "rgba(220, 220, 220, 1)",
                     borderWidth: 2,
                     pointRadius: 0,
                     data: myData,
@@ -135,7 +140,9 @@ const Train = () => {
           <CCardHeader>
             <small className="smallHeader">TRAIN</small>
             <h3 className="midHeader">Initialize Model</h3>
-            <small className="bottomHeader">Configure your settings and train model.</small>
+            <small className="bottomHeader">
+              Configure your settings and train model.
+            </small>
           </CCardHeader>
           <CCardBody>
             <CRow className="mb-3">
@@ -144,10 +151,15 @@ const Train = () => {
                 <small className="smallHeader">
                   FORECAST LENGTH<br></br>
                 </small>
-                How many <strong>{dataProps.freq[0]}</strong> into the future do you want to forecast?
+                How many <strong>{dataProps.freq[0]}</strong> into the future do
+                you want to forecast?
               </CFormLabel>
               <CCol sm={3}>
-                <CFormInput type="email" onChange={formHandler} id="inputEmail3" />
+                <CFormInput
+                  type="email"
+                  onChange={formHandler}
+                  id="inputEmail3"
+                />
               </CCol>
               {/* </CCol> */}
               {/* <CCol sm={6}>
@@ -169,15 +181,19 @@ const Train = () => {
                 })}
               </CCol> */}
             </CRow>
-            <CButton type="submit" className="text-white" onClick={() => buttonHandler()}>
+            <CButton
+              type="submit"
+              className="text-white"
+              onClick={() => buttonHandler()}
+            >
               Train Model
             </CButton>
           </CCardBody>
         </CCard>
       </CCol>
     </CRow>
-  )
-}
+  );
+};
 
-export default Train
+export default Train;
 // DUMP
